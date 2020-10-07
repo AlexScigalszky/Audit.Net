@@ -1,7 +1,6 @@
 ﻿using Audit.Net.Example.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
 
 namespace Audit.Net.Example
 {
@@ -15,35 +14,28 @@ namespace Audit.Net.Example
             using (var db = new BloggingContext())
             {
                 db.Database.Migrate();
+
+                var sr = new Service(db);
+
+                Console.WriteLine("Ready?");
+
+                Console.ReadKey();
+
                 // Create
-                Console.WriteLine("Inserting a new blog");
-                db.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
-                db.SaveChanges();
+                sr.Create();
 
                 // Read
-                Console.WriteLine("Querying for a blog");
-                var blog = db.Blogs
-                    .OrderBy(b => b.BlogId)
-                    .First();
+                Blog blog = sr.Read();
 
                 // Update
-                Console.WriteLine("Updating the blog and adding a post");
-                blog.Url = "https://devblogs.microsoft.com/dotnet";
-                blog.Posts.Add(
-                    new Post
-                    {
-                        Title = "Hello World",
-                        Content = "I wrote an app using EF Core!"
-                    });
-                db.SaveChanges();
+                sr.AddPost(blog);
 
                 // Delete
-                Console.WriteLine("Delete the blog");
-                db.Remove(blog);
-                db.SaveChanges();
+                sr.Remove(blog);
 
-                Console.WriteLine("Showing Audit table");
-                Console.WriteLine(string.Join(Environment.NewLine, db.Audits.Select(x => $"{x.DateTime} {x.Id} - {x.Operation}")));
+                // Audits
+                sr.ShowAudits();
+
                 Console.ReadKey();
             }
         }
