@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit.Net.Example", "Audit.Net.Example.csproj", "{FEACB073-B543-4F32-9F26-34B420BDE028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit.Net", "..\Audit.Net\Audit.Net.csproj", "{8E0758E3-E507-4848-A911-88645AEFF8E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEACB073-B543-4F32-9F26-34B420BDE028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEACB073-B543-4F32-9F26-34B420BDE028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEACB073-B543-4F32-9F26-34B420BDE028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEACB073-B543-4F32-9F26-34B420BDE028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0758E3-E507-4848-A911-88645AEFF8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0758E3-E507-4848-A911-88645AEFF8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0758E3-E507-4848-A911-88645AEFF8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0758E3-E507-4848-A911-88645AEFF8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {254891D2-248D-4065-9FAE-EE89CBC47F40}
+	EndGlobalSection
+EndGlobal
