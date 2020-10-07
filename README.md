@@ -35,3 +35,5 @@ There is an Example project.
         return result;
     }
 ```
+## Console Output
+[![](./example.png)]()
